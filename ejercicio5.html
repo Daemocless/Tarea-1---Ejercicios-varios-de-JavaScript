@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <input type="text" id="nombre" />
+      <button id="btn">Clikc</button>
+      <p id="resultado"></p>
+    </header>
+    <script>
+      const buttonclick = document.getElementById("btn");
+      const resultado = document.getElementById("resultado");
+
+      buttonclick.addEventListener("click", function () {
+        const input = document.getElementById("nombre");
+        const valor = input.value;
+        resultado.innerHTML = "¡Hola, " + valor + "!";
+      });
+      const Blue = (document.getElementById("resultado").style.color = "Blue");
+    </script>
+  </body>
+</html>

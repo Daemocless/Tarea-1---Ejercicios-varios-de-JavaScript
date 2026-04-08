@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <input type="text" id="texto" />
+      <button id="btn">Añadir</button>
+      <ul id="lista"></ul>
+    </header>
+    <script>
+      const buttonclick = document.getElementById("btn");
+      const input = document.getElementById("texto");
+      const lista = document.getElementById("lista");
+
+      buttonclick.addEventListener("click", function () {
+        const lista = document.getElementById("lista");
+        const texto = input.value;
+        const nuevoItem = document.createElement("li");
+
+        lista.innerHTML = lista.innerHTML + "<li>" + texto + "</li>";
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

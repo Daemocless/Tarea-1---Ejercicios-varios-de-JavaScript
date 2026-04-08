@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <button id="btn">Click</button>
+      <p id="resultado">Hola!</p>
+    </header>
+
+    <script>
+      const buttonclick = document.getElementById("btn");
+      const resultado = document.getElementById("resultado");
+
+      let visible = true;
+
+      buttonclick.addEventListener("click", function () {
+        if (visible) {
+          resultado.style.display = "none";
+          buttonclick.innerHTML = "Mostrar";
+          visible = false;
+        } else {
+          resultado.style.display = "block";
+          buttonclick.innerHTML = "Ocultar";
+          visible = true;
+        }
+      });
+
+      resultado.style.color = "blue";
+    </script>
+  </body>
+</html>
