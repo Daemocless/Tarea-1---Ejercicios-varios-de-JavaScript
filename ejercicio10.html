@@ -3,27 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Semáforo</title>
+
+    <style>
+      .circle {
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+        background-color: #444;
+        margin: 10px;
+        opacity: 0.2;
+      }
+    </style>
   </head>
- 
+
   <body>
     <header>
-      <input type="text" id="texto" />
-      <button id="btn">Añadir</button>
-      <ul id="lista"></ul>
+      <div id="verde" class="circle"></div>
+      <div id="amarillo" class="circle"></div>
+      <div id="rojo" class="circle"></div>
+
+      <button id="btn">Siguiente</button>
     </header>
+
     <script>
-      const buttonclick = document.getElementById("btn");
-      const input = document.getElementById("texto");
-      const lista = document.getElementById("lista");
+      const btn = document.getElementById("btn");
 
-      buttonclick.addEventListener("click", function () {
-        const lista = document.getElementById("lista");
-        const texto = input.value;
-        const nuevoItem = document.createElement("li");
+      const verde = document.getElementById("verde");
+      const amarillo = document.getElementById("amarillo");
+      const rojo = document.getElementById("rojo");
 
-        lista.innerHTML = lista.innerHTML + "<li>" + texto + "</li>";
-        input.value = "";
+      const luces = [rojo, amarillo, verde];
+      let estado = 0;
+
+      function apagarTodo() {
+        luces.forEach((luz) => {
+          luz.style.opacity = "0.2";
+        });
+      }
+
+      btn.addEventListener("click", function () {
+        apagarTodo();
+
+        if (estado === 0) {
+          rojo.style.backgroundColor = "red";
+          rojo.style.opacity = "1";
+        }
+
+        if (estado === 1) {
+          amarillo.style.backgroundColor = "yellow";
+          amarillo.style.opacity = "1";
+        }
+
+        if (estado === 2) {
+          verde.style.backgroundColor = "green";
+          verde.style.opacity = "1";
+        }
+
+        estado = (estado + 1) % 3;
       });
     </script>
   </body>
