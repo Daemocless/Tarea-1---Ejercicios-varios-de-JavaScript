@@ -66,4 +66,4 @@ Descripción: Permite añadir elementos a una lista desde un input.
 
 ### Ejercicio 10: Semáforo interactivo
 Archivo: `ejercicio10.html`  
-Descripción: Simula un semáforo que cambia entre rojo, naranja y verde con un botón.
+Descripción: Simula un semáforo que cambia entre rojo, amarillo y verde con un botón.
