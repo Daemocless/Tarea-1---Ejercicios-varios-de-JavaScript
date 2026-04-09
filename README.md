@@ -2,7 +2,6 @@
 
 Alumno: Kilian Rodriguez Duque
 
----
 
 ## Descripción
 Este repositorio contiene 10 ejercicios básicos de JavaScript realizados en archivos HTML independientes. Cada ejercicio demuestra el uso de eventos, manipulación del DOM y lógica básica en JavaScript.
